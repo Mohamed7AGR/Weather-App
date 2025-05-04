@@ -25,10 +25,9 @@ async function getWeatherData(city) {
       );
       const data = await res.json();
       if (data.error) {
-        todayName.innerHTML = "<h1>City not found</h1>";
+        locationCity .innerHTML = "<h1>City not found</h1>";
         return;
     }
-    todayDate.innerHTML = "";
       displayWeatherData(data);
     } catch (error) {
       console.error("Error fetching weather data:", error);
