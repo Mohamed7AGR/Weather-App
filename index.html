@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="shortcut icon" href="images/113.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark p-4 position-sticky top-0">
+      <div class="container w-75">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img
+            src="./images/logo@2x.png"
+            alt="Logo"
+            width="64"
+            height="38"
+            class="me-2"
+          />
+          <div class="logo-type">
+            <h1 class="site-title mb-0">Weather</h1>
+            <p class="site-description mt-0 mb-0">tagline goes here</p>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Live cameras</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Photos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contacts</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Search Section -->
+      <section
+        class="hero-section d-flex justify-content-center align-items-center"
+      >
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="input-group w-100">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter your city..."
+                id="findLocation"
+              />
+              <button class="btn btn-primary" type="button" id="find">
+                Find
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Weather Cards Section -->
+      <section id="cards">
+        <div class="container">
+          <div class="row" id="row-data">
+            <!-- Today Card -->
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div
+                class="forecast-card p-4 rounded-3 bg-custom text-white h-100"
+              >
+                <div class="d-flex justify-content-between mb-2">
+                  <div id="todayName"></div>
+                  <div id="todayDate"></div>
+                </div>
+                <div id="location" class="mb-2"></div>
+                <div class="fs-1">
+                  <span id="todayTemp"></span>
+                  <img src="" id="todayIcon" alt="" />
+                </div>
+                <div class="text-primary" id="todayCondition">
+                  Partly cloudy
+                </div>
+                <div class="mt-3">
+                  <img
+                    src="./images/icon-umberella@2x.png"
+                    width="24"
+                    class="me-1"
+                    alt=""
+                  />
+                  <span id="humidity"></span>
+                  <img
+                    src="./images/icon-wind@2x.png"
+                    width="24"
+                    class="ms-3 me-1"
+                    alt=""
+                  />
+                  <span id="wind-speed"></span>
+                  <img
+                    src="./images/icon-compass@2x.png"
+                    width="24"
+                    class="ms-3 me-1"
+                    alt=""
+                  />
+                  <span id="wind-dir"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Upcoming Days Cards -->
+            <div class="col-lg-8 col-md-6 mb-4">
+              <div class="d-flex gap-3 flex-wrap card-days">
+                <!-- JS will inject upcoming days here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-3 bg-dark">
+      <p class="mb-0">WeatherApp © 2024. All Rights Reserved.</p>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
