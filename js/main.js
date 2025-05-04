@@ -25,7 +25,7 @@ async function getWeatherData(city) {
       );
       const data = await res.json();
       if (data.error) {
-        locationCity .innerHTML = "<h1>City not found</h1>";
+        locationCity .innerHTML = "<h4>City not found</h1>";
         return;
     }
       displayWeatherData(data);
